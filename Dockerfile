@@ -2,10 +2,10 @@ FROM openjdk:8-jdk
 MAINTAINER iGenius
 
 # Specify versions to use
-ENV ANDROID_TARGET_SDK 28
-ENV ANDROID_BUILD_TOOLS 29.0.2
-ENV ANDROID_SDK_TOOLS_URL "https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
-ENV NDK_RELEASE 19c
+ENV ANDROID_TARGET_SDK 29
+ENV ANDROID_BUILD_TOOLS 30.0.0
+ENV ANDROID_SDK_TOOLS_URL "https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip"
+ENV NDK_RELEASE 21d
 
 # Other environment variables
 ENV ANDROID_HOME /opt/android-sdk-linux
