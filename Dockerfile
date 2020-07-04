@@ -16,11 +16,12 @@ RUN apt-get clean && apt-get -y update && apt-get -y install apt-utils wget tar 
 
 # Download Android SDK Tools
 RUN cd /opt \
+	&& mkdir -p ${ANDROID_HOME}/cmdline-tools \
     && wget -q "$ANDROID_SDK_TOOLS_URL" -O android-sdk-tools.zip \
-    && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME} \
+    && unzip -q android-sdk-tools.zip -d ${ANDROID_HOME}/cmdline-tools \
     && rm -f android-sdk-tools.zip
 
-ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+ENV PATH ${PATH}:${ANDROID_HOME}/cmdline-tools/tools:${ANDROID_HOME}/cmdline-tools/tools/bin:${ANDROID_HOME}/platform-tools
 
 RUN mkdir ~/.android && touch ~/.android/repositories.cfg
 #accepting licenses
