@@ -1,10 +1,10 @@
-FROM openjdk:8-jdk
+FROM openjdk:11
 MAINTAINER iGenius
 
 # Specify versions to use
-ARG ANDROID_TARGET_SDK=30
-ARG ANDROID_BUILD_TOOLS=30.0.3
-ARG ANDROID_SDK_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-7302050_latest.zip"
+ARG ANDROID_TARGET_SDK=31
+ARG ANDROID_BUILD_TOOLS=31.0.0
+ARG ANDROID_SDK_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-7583922_latest.zip"
 ARG NDK_VERSION=21.1.6352462
 ARG CMAKE_VERSION=3.10.2.4988404
 
